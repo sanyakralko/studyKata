@@ -20,17 +20,16 @@
 
 
 //Ты можешь добавлять свои импорты
-import java.util.*;
+
 
 //решение должно содержать данный класс
 class Main {
     public static void main(String[] args) throws Exception {
 
-        System.out.println( new  Main().calc("I + XX "));
+        System.out.println( new  Main().calc("1 -10 "));
     }
     //Решение должно содержать данный метод
     public String calc(String prim) throws Exception {
-
         String[] s = prim.split("-|\\*|\\+|\\/");
         if (s.length != 2)
             throw new Exception("шото не так с количеством");
@@ -74,7 +73,7 @@ class Main {
         if (znak == '+') {
             rez = ints[0] + ints[1];
         } else if (znak == '-') {
-            if (ints[0] <= ints[1])
+            if (ints[0] <= ints[1] && r>0)
                 throw new  Exception("отриц или ноль");
             rez = ints[0] - ints[1];
         } else if (znak == '*') {
@@ -82,7 +81,7 @@ class Main {
         } else if (znak == '/') {
             rez = ints[0] / ints[1];
         }
-        String otv=null;
+        String otv  = null;
         if(r>0){
           otv= rim[rez-1];
         }
