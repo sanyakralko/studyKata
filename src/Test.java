@@ -22,11 +22,15 @@
 //Ты можешь добавлять свои импорты
 
 
+import java.util.Scanner;
+
 //решение должно содержать данный класс
 class Main {
     public static void main(String[] args) throws Exception {
-
-        System.out.println( new  Main().calc("1 -10 "));
+Scanner scanner= new Scanner(System.in);
+        System.out.println("ввод");
+String str= scanner.nextLine();
+        System.out.println( new  Main().calc(str));
     }
     //Решение должно содержать данный метод
     public String calc(String prim) throws Exception {
